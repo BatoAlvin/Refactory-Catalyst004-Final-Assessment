@@ -1,0 +1,54 @@
+extends layout
+
+block content
+    h3 #{title}
+    form(method='POST' action="/patients/edit/"+patient._id)
+        .row
+            .col-md-6
+                #form-group
+                    label Surname
+                    input.form-control(name= 'surname', type='text', value= patient.surname)
+            .col-md-6
+                #form-group
+                    label Given name
+                    input.form-control(name= 'givenName', type='text' value= patient.givenName)
+
+        .row
+            .col-md-6
+                #form-group
+                    label Date of Birth
+                    input.form-control(name= 'dob' type='date' value= patient.dob)
+            .col-md-6
+                #form-group
+                    label Place of Residence
+                    input.form-control(name= 'residence' type='text' value= patient.residence)
+        .row
+            .col-md-6
+                #form-group
+                    label Occupation
+                    input.form-control(name= 'occupation' type='text' value= patient.occupation)
+            .col-md-6
+                #form-group
+                    label Nationality
+                    input.form-control(name= 'nationality' type='text' value= patient.nationality)
+        h6 Gender:
+        .row
+            .col-md-6
+                label
+                input#male(style="width: 10%;" type="radio" value="Male" name="rating" )
+                | Male
+            .col-md-6
+                label
+                input#female(style="width: 10%;" type="radio" value="Famale" name="rating" )
+                | Female            
+
+        label Catergory 
+            br
+            select(name="category" value= patient.category)
+                option() Select Category
+                option(value="returnee") Retunee
+                option(value="contact") Contact
+                option(value="alert") Alert
+                option(value="volunteer") Volunteer                        
+        br                
+        input.btn.btn-primary( type='submit' value= 'Register')

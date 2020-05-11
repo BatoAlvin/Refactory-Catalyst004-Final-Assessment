@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    h5= patient.name
+    hr
+    a.btn.btn-default(href="/patients/edit/"+patient._id) Edit
+    a.btn.btn-danger.delete-patient(href='#',data-id=patient._id) Delete    
