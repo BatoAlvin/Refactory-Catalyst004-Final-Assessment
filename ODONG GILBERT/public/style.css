@@ -1,0 +1,38 @@
+body{
+  font-family: Tahoma;
+}
+
+#form{
+ margin-top: 50px;
+  height: 650px;
+  width: 68%;
+  border: 1px solid lightgray;
+}
+
+#select{
+  width: 93%;
+  margin-left: 20px;
+  border-radius: 0;
+} 
+
+.form-control{
+  padding: 20px;
+  margin: 5px;
+  border-radius: 0;
+}
+
+#button{
+  margin-left: 77%;
+  width: 150px;
+  margin-top: 10px;
+}
+p{
+  margin-left: 300px;
+  margin-top: 0;
+}
+
+h1{
+  margin-left: 250px; 
+  margin-top: 0;
+
+}

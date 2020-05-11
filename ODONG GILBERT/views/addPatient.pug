@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="../public/css/bootstrap.css")
+    link(rel="stylesheet" href="../public/style.css")
+    title Document
+  body
+    .container
+      form#form(action="/addPatient" method="POST" name="form")
+        .row
+          img(src="../public/images/form-header-image.png" alt="" srcset="" style="margin-left: 30px;")
+        .row
+          p Ministry of Health
+          h1 COVID-19(CORONA VIRUS)
+          p Virus test Registration form
+        .row
+          .col
+            label(for="") Sur Name
+            input.form-control(type="text" name="name1" id="name")
+          .col
+            label(for="") Given Name
+            input.form-control(type="text" style="width: 350px;" name="name2" id="name")
+        .row
+          .col
+            label(for="") Date of Birth
+            input.form-control(type="date" name="dob" id="dob")
+          .col
+            label(for="") Place of Residence
+            input.form-control(type="text" style="width: 350px;" name="place" id="place")
+        hr
+        .row
+          .col
+            input(type="radio" name="sex" id="sex")
+            | Male
+          .col
+            input(type="radio" name="sex" id="sex")
+            | Female
+        .row
+          select#select.form-control
+            option(name="type") Returnee
+            option(name="type") Contact
+            option(name="type") Alert
+            option(name="type") Voluteer
+        .row
+          button#button.btn.btn-primary(type="submit" style="border-radius: 0;") Register
