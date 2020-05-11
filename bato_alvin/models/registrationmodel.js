@@ -5,10 +5,10 @@ const mongoose = require("mongoose");
 var nameSchema = new mongoose.Schema({
     surname: String,
     firstname: String,
-    date: Number,
+    date: String,
     location: String,
     job: String,
-    origin: Date,
+    origin: String,
     gen: String,
     category: String
   });
