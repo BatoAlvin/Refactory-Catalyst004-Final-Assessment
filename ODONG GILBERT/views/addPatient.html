@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../public/css/bootstrap.css">
+  <link rel="stylesheet" href="../public/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+  <form id="form" name="form">
+    <div class="row">
+      <img src="../public/images/form-header-image.png" alt="" srcset="" style="margin-left: 30px;">
+    </div>
+    <div class="row">
+      <p>Ministry of Health</p>
+      <h1>COVID-19(CORONA VIRUS)</h1>
+      <P>Virus test Registration form</P>
+    </div>
+        <div class="row">
+          <div class="col">
+            <label for="">Sur Name</label>
+            <input type="text" class="form-control" name="name1">
+            <span id="error1" style="color: red;"></span>
+          </div>
+          <div class="col" >
+            <label for="">Given Name</label>
+            <input type="text" class="form-control" style="width: 350px;" name="name2">
+            <span id="error1" style="color: red;"></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="">Date of Birth</label>
+            <input type="date" class="form-control" name="dob">
+            <span id="error2" style="color: red;"></span>
+          </div>
+          <div class="col">
+            <label for="">Place of Residence</label>
+            <input type="text" class="form-control" style="width: 350px;" name="place">
+            <span id="error2" style="color: red;"></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="">Occupation</label>
+            <input type="text" class="form-control" name="occup">
+            <span id="error4" style="color: red;"></span>
+          </div>
+          <div class="col">
+            <label for="">Nationality</label>
+            <input type="text" class="form-control" style="width: 350px;" name="nin">
+            <span id="error5" style="color: red;"></span>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          
+          <div class="col">
+            <input type="radio" name="sex">Male
+            <span id="error6" style="color: red;"></span>
+          </div>
+          <div class="col">
+            <input type="radio" name="sex">Female
+            <span id="error6" style="color: red;"></span>
+          </div>
+
+        </div>
+        <div class="row">
+          <select class="form-control" id="select">
+            <option name="type">Returnee</option>
+            <option name="type">Contact</option>
+            <option name="type">Alert</option>
+            <option name="type">Voluteer</option>
+            <span id="error7" style="color: red;"></span>
+          </select>
+          
+          </select>
+
+          
+        </div>
+        <div class="row">
+          <button type="submit" id="button" class="btn btn-primary" style="border-radius: 0;">Register</button>
+        </div>
+
+        
+    </form>
+
+  </div>
+    
+  <script src="../public/valid.js"></script>
+</body>
+</html>

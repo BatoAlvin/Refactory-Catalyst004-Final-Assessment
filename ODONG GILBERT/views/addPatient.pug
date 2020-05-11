@@ -1,0 +1,64 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="/static/css/bootstrap.css")
+    link(rel="stylesheet" href="/static/style.css")
+    title Document
+  body
+    .container
+      form#form(name="form" action="/addPatient" method="POST")
+        .row
+          img(src="../public/images/form-header-image.png" alt="" srcset="" style="margin-left: 30px;")
+        .row
+          p Ministry of Health
+          h1 COVID-19(CORONA VIRUS)
+          p Virus test Registration form
+        .row
+          .col
+            label(for="") Sur Name
+            input.form-control(type="text" name="name1")
+            span#error1(style="color: red;")
+          .col
+            label(for="") Given Name
+            input.form-control(type="text" style="width: 350px;" name="name2")
+            span#error1(style="color: red;")
+        .row
+          .col
+            label(for="") Date of Birth
+            input.form-control(type="date" name="dob")
+            span#error2(style="color: red;")
+          .col
+            label(for="") Place of Residence
+            input.form-control(type="text" style="width: 350px;" name="place")
+            span#error2(style="color: red;")
+        .row
+          .col
+            label(for="") Occupation
+            input.form-control(type="text" name="occup")
+            span#error4(style="color: red;")
+          .col
+            label(for="") Nationality
+            input.form-control(type="text" style="width: 350px;" name="nin")
+            span#error5(style="color: red;")
+        hr
+        .row
+          .col
+            input(type="radio" name="sex")
+            | Male
+            span#error6(style="color: red;")
+          .col
+            input(type="radio" name="sex")
+            | Female
+            span#error6(style="color: red;")
+        .row
+          select#select.form-control
+            option(name="type") Returnee
+            option(name="type") Contact
+            option(name="type") Alert
+            option(name="type") Voluteer
+            span#error7(style="color: red;")
+        .row
+          button#button.btn.btn-primary(type="submit" style="border-radius: 0;") Register
+    script(src="/static/valid.js")
