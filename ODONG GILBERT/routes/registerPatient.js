@@ -5,20 +5,15 @@ const server = express();
 const User = require("../models/patientModels");
 
 
-// Routes for patient registration
-server.get("/", (req, res) => {
-    res.render("addPatient");
-  });
-  
-
+// Get route to display addPatient registration form
 
 router.get("/addPatient",async(req,res)=>{
     if(req.session.user){
         try{
-            res.render("addPatient");
+            res.render("/addPatient");
             // The catch block to handle parsing errors
         }catch{
-            res.status(500).send("Unable to display Add patient form")
+            res.status(500).send("Unable to display salesReg form")
         }
     }else{
         res.redirect("/");
@@ -27,19 +22,20 @@ router.get("/addPatient",async(req,res)=>{
 
 
 
-// Routes to save the sales into the database
+// Routes to save the pateints into the database
 
-router.post("/patientList",async(req,res)=>{
+router.post("/",async(req,res)=>{
     try{
-        let patient = await new addPatient(req.body);
+        let patients = await new addPatient(req.body);
         // console.log(sales)
-        patient.save();
-        res.redirect("/user/addPatient");
+        patients.save();
+        res.redirect("/addPatient");
     }catch(err){
-        res.status(404).send("Failed to save sales to the database")
+        res.status(404).send("Failed to save Patients to the database")
 
     }
 
 }); 
+
 module.exports=router
 
