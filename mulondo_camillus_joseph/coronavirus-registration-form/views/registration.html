@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/registration.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container register-form">
+      <div class="row">
+        <div class="col-md-12">
+          <img
+            class="image"
+            src="../public/images/form-header-image.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div>
+        <header class="mainhead">
+          <h4>Ministry of Health</h4>
+
+          <h2>COVID-19 (CORONA VIRUS)</h2>
+
+          <h3>Virus-Test Registration Form</h3>
+        </header>
+      </div>
+
+      <form action="/" method="get" id="form">
+        <div class="form-content">
+          <div class="row">
+            <div class="col-md-6">
+              <label>
+                Surname
+                <input
+                  name="surname"
+                  type="text"
+                  class="form-control"
+                  value=""
+                />
+              </label>
+              <small>error message</small>
+            </div>
+            <div class="col-md-6">
+              <label>
+                given name
+                <input
+                  name="otherName"
+                  type="text"
+                  class="form-control"
+                  value=""
+                />
+              </label>
+              <small>error message</small>
+            </div>
+            <div class="col-md-6">
+              <label>
+                Date of birth
+                <input
+                  name="dateOfBirth"
+                  type="date"
+                  class="form-control"
+                  value=""
+                />
+              </label>
+              <small>error message</small>
+            </div>
+            <div class="col-md-6">
+              <label>
+                place of residence
+                <input
+                  name="residence"
+                  type="text"
+                  class="form-control"
+                  value=""
+                />
+              </label>
+              <small>error message</small>
+            </div>
+            <div class="col-md-6">
+              <label>
+                occupation
+                <input name="work" type="text" class="form-control" value="" />
+              </label>
+              <small>error message</small>
+            </div>
+            <div class="col-md-6">
+              <label>
+                nationality
+                <input
+                  name="country"
+                  type="text"
+                  class="form-control"
+                  value=""
+                />
+              </label>
+              <small>error message</small>
+            </div>
+            <hr />
+            <div class="col-md-6">
+              <label>
+                male
+                <input
+                  name="gender"
+                  type="radio"
+                  class="form-control"
+                  value=""
+                />
+              </label>
+            </div>
+            <div class="col-md-6">
+              <label>
+                female
+                <input
+                  name="gender"
+                  type="radio"
+                  class="form-control"
+                  value=""
+                />
+              </label>
+            </div>
+
+            <div class="col-md-12">
+              <label>
+                catergory
+
+                <select id="cars" name="catergory">
+                  <option value="600000"> Returnee</option>
+                  <option value="900000"> Contact</option>
+                  <option value="1200000">Alert</option>
+                  <option value="1800000">Volunteer</option>
+                </select>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6"></div>
+          <div class="col-md-6">
+            <button type="submit" class="btnSubmit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="../registration.js"></script>
+  </body>
+</html>

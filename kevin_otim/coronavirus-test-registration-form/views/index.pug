@@ -1,0 +1,76 @@
+doctype html
+html
+  head
+    title virus-test registration form
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    .container
+      .row
+       .col-md-8.mx-auto(style = 'backgound-color:coral;')
+        img(src="/static/img/form-header-image.png", alt="", srcset="" style='align-text:center;width:100%')
+        div(style='text-align:center')
+         h5 Ministry of health
+         h3(style='font-wieght:bold') COVID-19(CORONA VIRUS)
+         h5 Virus-Test Registration Form
+          if successes
+           for success in successes
+            div.alert.alert-success #{ success }
+             div#messageContainer
+              button.close(type='button', data-dismiss='alert', aria-label='Close')
+               span(aria-hidden='true') × 
+        form(action="/index/", method="post", autocomplete='off',name= 'myform', onsubmit = 'return formValidation();')
+         .form-row
+          .form-group.col-md-6
+           label(for='surname') Surname
+           input.form-control(name='surname', type='text')
+           p.text-danger#para1.small
+          .form-group.col-md-6
+           label(for='given_name') Given name
+           input.form-control(name='given_name',type='text')
+           p.text-danger#para2.small
+         .form-row
+          .form-group.col-md-6
+           label(for='date_of_birth') Date Of Birth
+           input#dateofbirth.form-control(name='date_of_birth', type='date')
+           p.text-danger#para10.small
+          .form-group.col-md-6
+           label(for='residence') Place Of Residence
+           input.form-control(name='residence',type='text')
+           p.text-danger#para4.small
+         .form-row
+          .form-group.col-md-6
+           label(for='occupation') Occupation
+           input.form-control(name='occupation', type='text')
+           p.text-danger#para5.small
+          .form-group.col-md-6
+           label(for='nationality') Nationality
+           input.form-control(name='nationality',type='text')
+           p.text-danger#para6.small
+         .form-row
+          .form-group.col-md
+           h4 Gender
+           hr
+         .form-row
+          .form-check.form-check-inline.col-md-6
+           input#male.form-check-input(name='gender', value='Male', type='radio',checked)
+           label.form-check-label(for='male') Male
+          .form-check.form-check-inline
+           input#female.form-check-input(name='gender', value='Female', type='radio')
+           label.form-check-label(for='female') Female
+         .form-row
+          .form-group.col-md
+           h4 Category
+           select(name='category').form-control
+            option.text-center(selected='' value="Default") --Select Category--
+            option(value="Returnee") Returnee
+            option(value="Contact") Contact
+            option(value="Alert") Alert
+            option(value="Volunteer") Volunteer
+           p.text-danger#para7.small
+         .form-row
+          .form-group.ml-auto
+           input.btn.btn-primary(type="submit", value="Register", style='width:200px')       
+
+    script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous")
+    script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous")
+    script(src='/static/js/validation.js')

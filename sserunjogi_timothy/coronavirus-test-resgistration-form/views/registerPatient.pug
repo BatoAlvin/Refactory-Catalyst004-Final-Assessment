@@ -1,0 +1,82 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="description" content="Colorlib Templates")
+    meta(name="author" content="Colorlib")
+    meta(name="keywords" content="Colorlib Templates")
+    title PATIENT REGISTRATION FORM
+    link(rel="stylesheet" href="../registerPatient.css")
+  body
+    .page-wrapper.bg-gra-02.p-t-130.p-b-100.font-poppins
+      .wrapper.wrapper--w680
+        .card.card-4
+          .card-body
+            h3.title(style="padding-left: 232px;") Ministry of Health
+            h2.title(style="padding-left: 190px;")
+              b COVID19 (CORONA VIRUS)
+            h3.title(style="padding-left: 184px;") Virus-Test Registration Form
+            form(method="POST" action="/register/addPatient" style="padding-top: 34px;" onsubmit="return patientSubmit();")
+              .row.row-space
+                .col-2
+                  .input-group
+                    label.label Surname
+                    input#surname.input--style-4(type="text" name="surname")
+                    #surname_error
+                .col-2
+                  .input-group
+                    label.label Given name
+                    input#givenname.input--style-4(type="text" name="givenname")
+                    #givenname_error
+              .row.row-space
+                .col-2
+                  .input-group
+                    label.label Date of Birth
+                    .input-group-icon
+                      input#birth.input--style-4.js-datepicker(type="text" name="dob")
+                      #dob_error
+                      i.zmdi.zmdi-calendar-note.input-icon.js-btn-calendar
+                .col-2
+                  .input-group
+                    label.label Place of residence
+                    input#residence.input--style-4(type="text" name="residence")
+                    #residence_error
+              .row.row-space
+                .col-2
+                  .input-group
+                    label.label Occupation
+                    input#job.input--style-4(type="text" name="occupation")
+                    #occupation_error
+                .col-2
+                  .input-group
+                    label.label Nationality
+                    input#origin.input--style-4(type="text" name="nationality")
+                    #nationality_error
+              .row.row-space
+                .input-group
+                  label.label Gender
+                  .p-t-10
+                    label.radio-container.m-r-45(style="padding-right: 189px;")
+                      | Male
+                      input#gender(type="radio" checked="checked" name="gender")
+                      span.checkmark
+                    label.radio-container
+                      | Female
+                      input#gender(type="radio" name="gender")
+                      span.checkmark
+              .input-group
+                label.label Category
+                .rs-select2.js-select-simple.select--no-search
+                  select#cate(name="input--style-4")
+                    #cate_error
+                    option(disabled="disabled" selected="selected") -- Select Category --
+                    option Returnee
+                    option Contact
+                    option Alert
+                    option(value="") Volunteer
+                  .select-dropdown
+              .p-t-15
+                button.btn.btn--radius-2.btn--blue(type="submit") Register
+    // Main JS
+    script(src="../registerPatient.js")

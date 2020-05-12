@@ -1,0 +1,11 @@
+body{
+    /* margin-left: 300px; */
+    padding: 0px;
+    background-color: white;
+}
+
+.form-control{
+    width: 70%;
+    height: 40%;
+    
+}

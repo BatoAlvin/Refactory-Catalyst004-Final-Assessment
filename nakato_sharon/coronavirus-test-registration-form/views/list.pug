@@ -1,0 +1,32 @@
+html
+    head    
+        title List of users
+    body
+        div.form-row
+            div.col.form-group.col-md-9    
+                form.search(action='/list')
+                  
+            table
+                thead
+                    tr
+                        th(style="padding-left: 40px;") Surname
+                        th(style="padding-left: 40px;")  Given name
+                        th(style="padding-left: 40px;")  Date
+                        th(style="padding-left: 40px;")  Religion
+                        th(style="padding-left: 40px;")  Residence
+                        th(style="padding-left: 40px;")  Occupation
+                        th(style="padding-left: 40px;")  Nationality
+                        th(style="padding-left: 40px;")  Gender
+                        th(style="padding-left: 40px;")  Category
+
+                tbody
+                    each user in users
+                        tr
+                            td(style="padding-left: 40px;")   #{user.surname}
+                            td(style="padding-left: 40px;")   #{user.givenname}
+                            td(style="padding-left: 40px;")   #{user.dob}
+                            td(style="padding-left: 40px;")   #{user.residence}
+                            td(style="padding-left: 40px;")   #{user.occupation}
+                            td(style="padding-left: 40px;")   #{user.nationality}
+                            td(style="padding-left: 40px;")   #{user.gender}
+                            td(style="padding-left: 40px;")   #{user.category}

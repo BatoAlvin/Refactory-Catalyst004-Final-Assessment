@@ -1,0 +1,15 @@
+html {
+	font-family: sans-serif;
+	color: black;
+}
+body {
+	max-width: 60%;
+	margin: 1rem auto;
+	padding: 0 2rem;
+	padding-bottom: 1rem;
+	border: 2px solid #dede;
+}
+button {
+	margin-left: 22rem;
+	width: 23rem;
+}

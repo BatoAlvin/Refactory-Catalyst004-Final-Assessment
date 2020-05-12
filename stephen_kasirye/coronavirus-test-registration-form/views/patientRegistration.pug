@@ -1,0 +1,91 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width,initial-scale=1')
+    title Patients Registration
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous')
+    link(rel='stylesheet' href='/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/css/coronavirus.css')
+  body
+    .row
+      .col-md-8.offset-md-2
+        #body-div
+          header
+            img(src='/images/form-header-image.png' alt='Header Image')
+          .row
+            .col-md-12(style='text-align: center;')
+              h5 Ministry of Health
+              h3 COVID-19 (CORONA VIRUS)
+              h5 Virus - Test Registration Form
+          .row
+            .col-md-10.offset-md-1
+              h2.success-message Registration was successful !
+          .row
+            .col-md-10.offset-md-1
+              form(name='registrationForm' onsubmit='return formValidation();' action='/addPatient' method='POST')
+                .row
+                  .col-md-6.form-group
+                    label(for='surName') Surname
+                    span.red-asterisk *
+                    input.form-control(type='text' name='surName')
+                    #surName-error.error This field is required
+                  .col-md-6.form-group
+                    label(for='givenName') Given name
+                    span.red-asterisk *
+                    input.form-control(type='text' name='givenName')
+                    #givenName-error.error This field is required
+                .row
+                  .col-md-6.form-group
+                    label(for='dob') Date of Birth
+                    span.red-asterisk *
+                    input.form-control(type='date' name='dob')
+                    #dob-error.error Select Date of Birth
+                  .col-md-6.form-group
+                    label(for='residence') Place of Residence
+                    span.red-asterisk *
+                    input.form-control(type='text' name='residence')
+                    #residence-error.error This field is required
+                .row
+                  .col-md-6.form-group
+                    label(for='occupation') Occupation
+                    span.red-asterisk *
+                    input.form-control(type='text' name='occupation')
+                    #occupation-error.error This field is required
+                  .col-md-6.form-group
+                    label(for='nationality') Nationality
+                    span.red-asterisk *
+                    input.form-control(type='text' name='nationality')
+                    #nationality-error.error This field is required
+                .row
+                  .col-md-12
+                    label(for='gender') Gender
+                    .row(style='margin-top: -15px;')
+                      .hr-line
+                        hr
+                .row(style='margin-top: -25px; margin-bottom: -10px;')
+                  .col-md-6.form-group
+                    span
+                      input#male(type='radio' name='gender' value='Male' checked)
+                    label(for='male' style='margin-left: 10px;') Male
+                  .col-md-6.form-group
+                    span
+                      input#female(type='radio' name='gender' value='Female')
+                      label(for='female' style='margin-left: 10px;') Female
+                .row
+                  .col-md-12.form-group
+                    label(for='category') Category
+                    span.red-asterisk *
+                    select#category.form-control(name='category')
+                      option(value='Default') -- Select Category --
+                      option(value='Returnee') Returnee
+                      option(value='Contact') Contact
+                      option(value='Alert') Alert
+                      option(value='Volunteer') Volunteer
+                    #category-error.error Select Patient Category
+                .row
+                  .col-md-6.offset-md-6.form-group
+                    input.form-control.btn.btn-primary(type='submit' value='Register')
+    script(type='text/javascript' src='/js/patientValidation.js')
+    //  <script src="/js/bootstrap.min.js"></script> 
+    //  <script src="/js/jquery-3.5.1.min.js"></script> 

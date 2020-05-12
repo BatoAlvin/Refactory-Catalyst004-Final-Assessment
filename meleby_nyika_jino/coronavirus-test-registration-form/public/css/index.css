@@ -1,0 +1,53 @@
+body{
+    max-width: 700px;
+    margin: auto;
+    height: 400px;
+    margin-top: 5px;    
+}
+img{
+    height: 70px;
+}
+label{
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+.card-title{
+    margin-bottom: 0;
+}
+select{
+    text-align-last:center; 
+}
+
+.card-body{
+    padding: 1.8rem;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: -7px;
+}
+form{
+    margin-top: 15px;
+}
+h4,h6{
+    text-align: center;
+    margin-bottom: 0;
+}
+h1{
+    
+    color: white;
+    text-align: center;
+    padding-bottom: 5px;
+}
+.form-control{
+    border: 1px solid #c7cccc;
+    border-radius: 0rem;
+} 
+.submits{
+    text-align: right;
+    margin-bottom: 20px;
+}
+.gender{
+    border-top: 1px solid rgb(189, 184, 184);
+}
+#female{
+    margin-left: 16.3em;
+}

@@ -1,0 +1,88 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width,initial-scale=1')
+    title Patients Registration
+    link(rel='stylesheet' href='/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/css/styles.css')
+  body
+    #whole
+      .container-fluid
+        header
+          img(src='/images/form-header-image.png' alt='logo')
+          //  <img src="/public/images/uganda-coat_of_arms.png" alt=""> 
+          h3 Ministry of Health
+          h1 COVID-19(CORONA VIRUS)
+          h3 Virus-Test Registration Form
+      form#patients_form(action='/' method='POST' name='patients_form')
+        div
+          .form-row
+            .form-group.col-md-6
+              label(for) Surname
+              input.form-control#surname(type='text' name='surname' required)
+              #error1(style='display: none; color:red;') This field is required with Alphabets only
+            //  End First Name 
+            .form-group.col-md-6
+              label(for) Given name
+              input.form-control#givenname(type='text' name='givenname' required)
+              #error2(style='display: none; color:red;') This field is required with Alphabets only
+          //  End Given Name 
+          .form-row
+            .form-group.col-md-6
+              label(for) Date of Birth
+              input.form-control#dob(type='date' name='dob')
+              #error3(style='display: none; color:red;') Select Date of Birth
+            //  End date of birth 
+            .form-group.col-md-6
+              label(for) Place of residence
+              input.form-control#residence(type='text' name='residence')
+              #error4(style='display: none; color:red;') This field is required
+          //  End Place of residence 
+          .form-row
+            .form-group.col-md-6
+              label(for) Occupation
+              input.form-control#occupation(type='text' name='occupation')
+              #error5(style='display: none; color:red;') This field is required
+            //  End Occupation 
+            .form-group.col-md-6
+              label(for) Nationality
+              input.form-control#nationality(type='text' name='nationality')
+              #error6(style='display: none; color:red;') This field is required
+          //  End Nationality 
+          .form-row
+            .form-group.col-md-12#gender
+              h6
+                b Gender
+          .form-row
+            .form-group.col-md-6
+              input#gender(type='radio' name='gender' value='Male')
+              | Male
+
+            .form-group.col-md-6
+              input#gender(type='radio' name='gender' value='Female')
+              | Female
+
+          //  End Gender 
+          .form-row
+            .form-group.col-md-12
+              label(for='category') Category
+              select#category.form-control(name='category')
+                option(value='0') --Select Category--
+                option(value='Returnee') Returnee
+                option(value='Contact') Contact
+                option(value='Alert') Alert
+                option(value='Volunteer') Volunteer
+              #error7(style='display: none; color:red;') Select Patient Category
+          //  End Category 
+          //  End Submit Button 
+        .form-row
+          .form-group.col-md-6.
+            
+            
+          .form-group.col-md-6
+            button.btn.btn-primary.form-control#submit(type='submit' name='submit' onclick='patient_validation()' value='Register') Register
+      //  End Form 
+    script(src='/js/validation.js')
+    script(src='/js/jquery-3.5.1.min.js')
+    script(src='/bootstrap/js/bootstrap.min.js')

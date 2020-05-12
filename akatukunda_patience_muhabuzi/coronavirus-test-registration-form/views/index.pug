@@ -1,0 +1,102 @@
+doctype html
+html
+  head
+    meta(name="content" content="width=device-width, initial-scale=1.0" charset="utf-8")
+    title Coronavirus Registration
+    link(rel="stylesheet" href="/static/css/bootstrap.min.css")
+    link(rel="stylesheet" href="/static/register.css")
+  body
+    center
+      img(src="static/images/form-header-image.png")
+      h5 Ministry of Health
+      h2
+        strong COVID-19(CORONA VIRUS)
+      h5 Virus-Test Registration Form
+    form.needs-validation(novalidate="" method="POST")
+      .form-row
+        .form-group.col-md-6
+          label(for="validate_surname") Surname
+          input#validate_surname.form-control(type="text" name="surname" autocomplete="off" minlength="1" maxlength="16" pattern="^[A-Za-z]+$" title="Only alphabet characters allowed" required="")
+          .invalid-feedback
+            | This field is required
+        .form-group.col-md-6
+          label(for="validate_givenname") Given name
+          input#validate_givenname.form-control(type="text" name="givenname" autocomplete="off" minlength="1" maxlength="16" pattern="^[A-Za-z]+$" title="Only alphabet characters allowed" required="")
+          .invalid-feedback
+            | This field is required
+      .form-row
+        .form-group.col-md-6
+          label(for="validate_date") Date of Birth
+          input#validate_date.form-control(type="date" name="date" autocomplete="off" minlength="1" maxlength="150" title="Fill in the date" required="")
+          .invalid-feedback
+            | Select Date of Birth
+        .form-group.col-md-6
+          label(for="validate_residence") Place of residence
+          input#validate_residence.form-control(type="text" name="residence" autocomplete="off" minlength="1" maxlength="20" pattern="^[A-Za-z]+$" title="Only alphabet characters allowed" required="")
+          .invalid-feedback
+            | This field is required
+      .form-row
+        .form-group.col-md-6
+          label(for="validate_work") Occupation
+          input#validate_work.form-control(type="text" name="work" autocomplete="off" minlength="5" maxlength="50" pattern="^[A-Za-z]+$" title="Only alphabet characters allowed" required="")
+          .invalid-feedback
+            | This field is required
+        .form-group.col-md-6
+          label(for="validate_nation") Nationality
+          input#validate_nation.form-control(type="text" name="nation" autocomplete="off" minlength="5" maxlength="20" pattern="^[A-Za-z]+$" title="Only alphabet characters allowed" required="")
+          .invalid-feedback
+            | This field is required
+      label Gender
+      hr
+      .form-row
+        .form-group.col-md-6
+          .form-check.form-check-inline
+            input.form-check-input(type="radio" name="radio" required="" value="male" checked="")
+            label.form-check-label Male
+        .form-group.col-md-6
+          .form-check.form-check-inline
+            input.form-check-input(type="radio" name="radio" required="" value="female")
+            label.form-check-label Female
+      .form-group
+        select.custom-select(name="category" style="text-align: center;" required="")
+          option(value="") -- Select Category --
+          option(name="category" required="" value="returnee") Returnee
+          option(name="category" required="" value="contact") Contact
+          option(name="category" required="" value="alert") Alert
+          option(name="category" required="" value="volunter") Volunteer
+        .invalid-feedback
+          | Select Patient Category
+      button.btn.btn-primary.btn-md(type="submit")
+        | Register
+    script.
+      // Script to disable form submissions if there are invalid fields
+      (function() {
+      "use strict";
+      window.addEventListener(
+      "load",
+      function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName(
+      "needs-validation"
+      );
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(
+      forms,
+      function(form) {
+      form.addEventListener(
+      "submit",
+      function(event) {
+      if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+      }
+      form.classList.add("was-validated");
+      },
+      false
+      );
+      }
+      );
+      },
+      false
+      );
+      })();

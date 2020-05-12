@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATALYST 004</title>
+    <link rel="stylesheet" href="../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../public/css/corona.css">
+</head>
+<body>
+ <form action=""  method="post" class="" name="coronavirus" onsubmit="formValidation(event);">
+    <div class="container" >
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="../public/images/uganda-flag-part.png" alt="" width="100%" height="50%">
+            </div>
+            <div class="col-lg-4">
+                <img src="../public/images/uganda-coat_of_arms.png" alt="" width="50%" height="100%">
+            </div>
+            
+            <div class="col-lg-4">
+                <img src="../public/images/uganda-flag-part.png" alt="" width="100%" height="50%">
+            </div>
+
+        </div>
+    </div>
+    
+    <div>
+        <h6 style="text-align: center;">
+            Ministry of Health
+        </h6>
+    </div>
+    <div>
+        <h3 style="text-align: center;">
+        COVID19(CORONA VIRUS)
+        </h3>
+    </div>
+    <div>
+        <h6 style="text-align: center;">
+       Virus-Test Registration Form
+        </h6>
+    </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Sur name</label>
+                <input type="text" class="form-control" id="surnames"  name="surname">
+                <div id="error1" style="display: none; color:red;">This field is required</div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="name">Given name</label>
+                <input type="text" class="form-control" id="given-names"  name="given_name">
+                <div id="error1" style="display: none; color:red;">This field is required</div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Date of birth</label>
+               <input type="text"  class="form-control" id="date" name="dob">
+               <div id="error1" style="display: none; color:red;">Select Date of Birth</div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="name">Place of residence</label>
+               <input type="text"  class="form-control" id="" name="placeofresidence">
+               <div id="error1" style="display: none; color:red;">This field is required</div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Occupation</label>
+               <input type="text"  class="form-control" id="" name="occupation">
+               <div id="error1" style="display: none; color:red;">This field is required</div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="name">Nationality</label>
+               <input type="text"  class="form-control" id="" name="nationality">
+               <div id="error1" style="display: none; color:red;">This field is required</div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Gender</label>
+               <input type="radio"  name="Male" name="">Male
+               <input type="radio"  style="margin-left: 150px;" name="">Female
+            </div>
+            
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="name">Categories</label>
+              <select name="categories" id="" class="form-control">
+                <div id="error1" style="display: none; color:red;">Select Patient category</div>
+                  <option value="" default >--Select Category--</option>
+                  <option value=""></option>
+
+              </select>
+
+            </div>
+           
+
+        </div>
+        <input type="submit"  value="Register" style="margin-left: 720px; ">
+       
+ </form>
+</body>
+ <script src="../public/js/corona.js"></script> 
+
+
+<!-- <script src="/js/bootstrap.js"></script> -->
+</html>

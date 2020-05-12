@@ -1,0 +1,31 @@
+html
+    head
+        title list of users
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
+    body
+        div
+            div
+                form.search(action="user/userlist")
+        table.table
+            thead
+                tr
+                    th Surname
+                    th Given name
+                    th Date of Birth
+                    th Place of Residence
+                    th Occupation
+                    th Nationality
+                    th Gender
+                    th Category
+                
+            tbody
+                each user in users
+                    tr
+                        td #{user.surname}
+                        td #{user.givenname}
+                        td #{user.DOB}
+                        td #{user.residencename}
+                        td #{user.occupation}
+                        td #{user.nationality}
+                        td #{user.gender}
+                        td #{user.category}

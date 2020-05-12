@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <!-- <div class="form"> -->
+        <div class="container p-0">
+        
+            <div class="row">
+              <div class="col-md-5">
+                <img src="uganda-flag-part.png" alt=""  class="col-md-12 image"/>
+              </div>
+              <!-- <div class="col-xs-1"></div> -->
+              <div class="col-sm-2">
+                <img src="uganda-coat_of_arms.png" height="147px;" alt="" class="col-md-12 image"/>
+              </div>
+              <!-- <div class="col-xs-1"></div> -->
+              <div class="col-md-5">
+                <img src="uganda-flag-part.png" alt="" class="col-md-12 image"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h3 class="text-justify text-center">Ministry of Health</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="text-center">COVID-19 (CORONA VIRUS)</h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <h4 class="text-center">Virus - Test Registration Form</h>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+            <form action="" method="POST" class="form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="surName"> <strong>Surname</strong></label>
+                        <input id="surName" type="text" class="col-md-12 Sname form-control" placeholder="Enter your Sur Name here"/>
+                        <span class="text-danger d-none" id="surname">This field is required</span>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="givenName"> <strong> Given name</strong></label>
+                        <input id="givenName" type="text" class="col-md-12 Sname  form-control" placeholder="Enter givenname here"  >
+                        <span class="text-danger d-none" id="givenname">This field is required</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="dateOfBirth" class="DOB"><strong>Date of Birth</strong></label>
+                        <input id="dateOfBirth" type="date" class="col-md-12 form-control" name="date" value="Date of birth">
+                        <span class="text-danger d-none" id="dateOfBirth-covid">This field is required</span>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="residence" class="Residence"><strong>Place of Residence</strong> </label>
+                        <input id="residence" type="text" class="col-md-12 form-control" placeholder="Enter  Place of Residence here">
+                        <span class="text-danger d-none" id="residence-covid">This field is required</span>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-6">
+                    <label for="occupation" class="occupation"><strong>Occupation</strong> </label>
+                    <input id="occupation" type="text" class="col-md-12 form-control" placeholder="Enter occupation here">
+                    <span class="text-danger d-none" id="occupation-covid">This field is required</span>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="nationality" class="nationality"><strong>Nationality</strong> </label>
+                    <input id="nationality" type="text" class="col-md-12 form-control" placeholder="Enter nationality here">
+                    <span class="text-danger d-none" id="nationality-covid">This field is required</span>
+              </div>
+              </div>
+              <div class="row mt-3">
+                  <div class="col-md-4">
+                    <label for="" class="GENDER"><strong>Gender</strong></label> 
+                  </div>
+              </div>
+              <hr>
+             <div class="row mb-4">
+      
+                <div class="col-md-6">
+                    <input id="gender" type="radio" name="Gender" value="male" class="form-check-label MALE" checked>
+                    <label for="" class="GENDER form-check-label"><strong></strong>Male</label> 
+                    
+              </div>
+                <div class="col-md-6">
+                    <input id="gender" type="radio" name="Gender" value="female" class="FEMALE form-check-label">
+                    <label for="" class="GENDER form-check-label"><strong></strong>Female</label>
+                </div>
+                <span class="text-danger d-none" id="gender-covid">This field is required</span>
+             </div>
+             <div class="row">
+                <div class="col-md-12">
+                    <label for="category" class=""><strong>Category</strong></label>
+                    <select id="category" name="" class="col-md-12 form-control">
+                       <option value="default">-- select Category --</option>
+                       <option value="returnee">Returnee</option>
+                       <option value="contact">Contact</option>
+                       <option value="alert">Alert</option>
+                       <option value="volunteer">volunteer</option>
+                      
+                       </select>
+                       <span class="text-danger d-none" id="category-covid">This field is required</span>
+             </div>
+             
+             </div>
+             <div class="row">
+                <div class="col-md-6">
+   
+                </div>
+               <div class="col-md-6 mt-4">
+                   <div class="btn btn-primary btn-block float-right" onclick="handleSubmit();" id="submit">
+                       Register
+                   </div>
+               </div>
+            </div>
+        
+            </form>
+            <script src="./index.js"></script>
+  </body>
+</html>

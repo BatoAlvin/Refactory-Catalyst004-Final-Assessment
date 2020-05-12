@@ -1,0 +1,86 @@
+/* .login-text {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+} */
+/* .heading-block {
+    display: inline-block;
+    color: #fff;
+    background-color: purple;
+    font-size: large;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    width: 100%;
+}
+.heading-footer {
+    color: purple;
+    margin-left: 10px;
+    font-size: smaller;
+} */
+.success-message {
+    display: inline-block;
+    color: #fff;
+    background-color: rgb(55, 194, 74);
+    padding-left: 10px;
+    display: none;
+}
+.successful-message {
+    display: inline-block;
+    color: #fff;
+    background-color: rgb(55, 194, 74);
+    padding-left: 10px;
+    display: block;
+    margin-left: 60px;
+}
+#body-div {
+    border: solid 2px lightgray;
+    width: 705px
+}
+img {
+    width: 700px;
+}
+h3 {
+    font-weight: bolder;
+}
+.red-asterisk {
+    color: red;
+    margin-left: 3px;
+}
+.sansserif * {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.error {
+    display: none;
+    color: red;
+    font-size: smaller;
+    margin-bottom: -1rem;
+}
+/* .input-field {
+    border: 1px solid rgb(116, 32, 32);
+} */
+label {
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+/* .btn-text {
+    font-weight: bold;
+}
+.btn-text1 {
+    background-color: purple;
+    color: #fff;
+} 
+.btn-text2 {
+    color: purple;
+    border: 1px solid purple;
+} */
+.hr-line {
+    width: 100%;
+}
+.no-outline:focus {
+    outline: none;
+}
+.align {
+    text-align: right;
+}

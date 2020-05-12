@@ -1,0 +1,73 @@
+doctype html
+html(lang="en")
+  head
+    link(rel="stylesheet" href="/css/bootstrap.min.css")
+    link(rel="stylesheet" href="/css/registration.css")
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Document
+  body
+    .container.register-form
+      .row
+        .col-md-12
+          img.image(src="/images/form-header-image.png" alt="")
+      div
+        header.mainhead
+          h4 Ministry of Health
+          h2 COVID-19 (CORONA VIRUS)
+          h3 Virus-Test Registration Form
+      form#form(action="/" method="post")
+        .form-content
+          .row
+            .col-md-6
+              label
+                | Surname
+                input.form-control(name="surname" type="text" value="")
+              small error message
+            .col-md-6
+              label
+                | given name
+                input.form-control(name="otherName" type="text" value="")
+              small error message
+            .col-md-6
+              label
+                | Date of birth
+                input.form-control(name="dateOfBirth" type="date" value="")
+              small error message
+            .col-md-6
+              label
+                | place of residence
+                input.form-control(name="residence" type="text" value="")
+              small error message
+            .col-md-6
+              label
+                | occupation
+                input.form-control(name="work" type="text" value="")
+              small error message
+            .col-md-6
+              label
+                | nationality
+                input.form-control(name="country" type="text" value="")
+              small error message
+            hr
+            .col-md-6
+              label
+                | male
+                input.form-control(name="gender" type="radio" value="")
+            .col-md-6
+              label
+                | female
+                input.form-control(name="gender" type="radio" value="")
+            .col-md-12
+              label
+                | catergory
+                select#cars(name="catergory")
+                  option(value="")  Returnee
+                  option(value="")  Contact
+                  option(value="") Alert
+                  option(value="") Volunteer
+        .row
+          .col-md-6
+          .col-md-6
+            button.btnSubmit(type="submit") Submit
+    script(src="../registration.js")
