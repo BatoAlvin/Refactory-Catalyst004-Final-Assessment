@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <title>PATIENT REGISTRATION FORM</title>
+
+    <link rel="stylesheet" href="../registerPatient.css">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h3 class="title" style="padding-left: 232px;">Ministry of Health</h3>
+                    <h2 class="title" style="padding-left: 190px;"><b>COVID19 (CORONA VIRUS)</b></h2>
+                    <h3 class="title" style="padding-left: 184px;">Virus-Test Registration Form</h3>
+                    <form method="POST" action="/register/addPatient" style="padding-top: 34px;" onsubmit="return patientSubmit();" >
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Surname</label>
+                                    <input class="input--style-4" type="text" id="surname" name="surname">
+                                    <div id="surname_error"></div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Given name</label>
+                                    <input class="input--style-4" type="text" id="givenname" name="givenname">
+                                    <div id="givenname_error"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Date of Birth</label>
+                                    <div class="input-group-icon">
+                                        <input class="input--style-4 js-datepicker" type="text" id="birth" name="dob">
+                                        <div id="dob_error"></div>
+                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Place of residence</label>
+                                    <input class="input--style-4" type="text" id="residence" name="residence">
+                                    <div id="residence_error"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Occupation</label>
+                                    <input class="input--style-4" type="text" id="job" name="occupation">
+                                    <div id="occupation_error"></div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Nationality</label>
+                                    <input class="input--style-4" type="text" id="origin" name="nationality">
+                                    <div id="nationality_error"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                              <div class="input-group">
+                                    <label class="label">Gender</label>
+                                    <div class="p-t-10">
+                                        <label class="radio-container m-r-45" style="padding-right: 189px;">Male
+                                            <input type="radio" checked="checked" id="gender" name="gender">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Female
+                                            <input type="radio" id="gender" name="gender">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label">Category</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select id="cate" name="input--style-4">
+                                    <div id="cate_error"></div>
+                                    <option disabled="disabled" selected="selected">-- Select Category --</option>
+                                    <option>Returnee</option>
+                                    <option>Contact</option>
+                                    <option>Alert</option>
+                                    <option value="">Volunteer</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" type="submit">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JS-->
+    <script src="../registerPatient.js"></script>
+
+</body>
+
+</html>

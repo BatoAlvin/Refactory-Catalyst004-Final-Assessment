@@ -1,0 +1,76 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="css/style.css")
+    link(rel="stylesheet" href="css/bootstrap.css")
+    title Document
+  body(onload="document.register.surName.focus();")
+    .container
+      .row
+        .col-md-2
+        .col-md-5
+          form#form(name="register" method="POST" action="/register")
+            img(src="images/system-images/form-header-image.png" alt="")
+            #check
+              p#p1 Ministry of Health
+              h1#header1 COVID-19 (CORONA VIRUS)
+              p#p2 Virus-Test Registration Form
+            #formdiv
+              .form-row
+                .col-md-6
+                  label(for="Surname") Surname
+                  input#surName.form-control(type="text" name="surName" required="")
+                  p#p3(style="color: red;font-family: 'Times New Roman', Times, serif;")
+                .col-md-6
+                  label(for="exampleInputPassword1") Given name
+                  input#givenname.form-control(type="text" name="givenname" required="")
+                  p#p4(style="color: red;font-family: 'Times New Roman', Times, serif;")
+              .form-row
+                .col-md-6.mb-3
+                  label(for="exampleInputPassword1") Date Of Birth
+                  input#dateOfBirth.form-control(type="date" name="dateOfBirth" required="")
+                  p#p5(style="color: red;font-family: 'Times New Roman', Times, serif;")
+                .col-md-6
+                  label(for="exampleInputPassword1") Place Of residence
+                  input#placeOfResidence.form-control(type="text" name="placeOfResidence" required="")
+                  p#p6(style="color: red;font-family: 'Times New Roman', Times, serif;")
+              .form-row
+                .col-md-6.mb-3
+                  label(for="exampleInputPassword1") Occupation
+                  input#occupation.form-control(type="text" name="occupation" required="")
+                  p#p7(style="color: red;font-family: 'Times New Roman', Times, serif;")
+                .col-md-6
+                  label(for="exampleInputPassword1") Nationality
+                  input#nationality.form-control(type="text" name="nationality" required="")
+                  p#p8(style="color: red;font-family: 'Times New Roman', Times, serif;")
+              .form-row
+                .col-md-12
+                  label(for="exampleInputPassword1") Gender
+                .col-md-6
+                  input(type="radio" name="gender" checked="")
+                  |  &nbsp; Male
+                // <input type="radio" name="gender">Female</input>
+                .col-md-6
+                  input(type="radio" name="gender")
+                  |  &nbsp; Female
+              br
+              .form-row
+                .col-md-12
+                  label(for="validationDefault01") Category
+                  select#category.custom-select(name="category" required="")
+                    option -- Select Category --
+                    option Returnee
+                    option Contact
+                    option Alert
+                    option Volunteer
+                  p#p9(style="color: red;font-family: 'Times New Roman', Times, serif;")
+              .form-row
+                .col-md-6
+                .col-md-6
+                  button.btn.btn-primary(type="submit" style="width: 100%;" onclick="validating('register')") Register
+                  br
+                  br
+    .col-md-4
+    script(src="js/patient.js")

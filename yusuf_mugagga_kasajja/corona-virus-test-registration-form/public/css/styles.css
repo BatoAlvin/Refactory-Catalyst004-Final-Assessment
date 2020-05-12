@@ -1,0 +1,39 @@
+
+form{
+    padding: 70px;
+    /* margin-left: 200px;
+    margin-right: 200px; */
+    font-weight: bold;
+}
+header{
+    text-align: center;
+    
+}
+img{
+    width: 800px;
+
+}
+
+#whole{
+    border: 2px grey solid;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 10px;
+    height: 950px;
+}
+h1{
+    font-weight: bolder;
+}
+
+#submit{
+    font-size: 23px;
+}
+
+#gender{
+    border-bottom: 2px rgb(175, 174, 174) solid;
+    font-weight: bold;
+}
+h2{
+    text-align: center;
+    font-weight: bolder;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Document</title>
+</head>
+
+<body onload="document.register.surName.focus();">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-2"></div>
+
+            <div class="col-md-5">
+                <form name="register" method="POST" action="/register" id="form">
+                    <img src="images/system-images/form-header-image.png" alt="">
+                    <div id="check">
+                        <p id="p1">Ministry of Health</p>
+                        <h1 id="header1">COVID-19 (CORONA VIRUS)</h1>
+                        <P id="p2">Virus-Test Registration Form</P>
+                        <h2 id="heading2">Succesfully Registered</h2>
+                    </div>
+                    <div id="formdiv">
+                        <div class="form-row">
+                            <div class="col-md-6 ">
+                                <label for="Surname">Surname</label>
+                                <input type="text" class="form-control" id="surName" name="surName" required>
+                                <p id="p3" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+                            </div>
+                            <div class="col-md-6 ">
+                                <label for="exampleInputPassword1">Given name</label>
+                                <input type="text" class="form-control" id="givenname" name="givenname" required>
+                                <p id="p4" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="exampleInputPassword1">Date Of Birth</label>
+                                <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" required>
+                                <p id="p5" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+                            </div>
+                            <div class="col-md-6 ">
+                                <label for="exampleInputPassword1">Place Of residence</label>
+                                <input type="text" class="form-control" id="placeOfResidence" name="placeOfResidence" required>
+                                <p id="p6" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="exampleInputPassword1">Occupation</label>
+                                <input type="text" class="form-control" id="occupation" name="occupation" required>
+                                <p id="p7" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+                            </div>
+                            <div class="col-md-6 ">
+                                <label for="exampleInputPassword1">Nationality</label>
+                                <input type="text" class="form-control" id="nationality" name="nationality" required>
+                                <p id="p8" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-md-12 ">
+                                <label for="exampleInputPassword1">Gender</label></div>
+                            <div class="col-md-6 ">
+                                <input type="radio" name="gender" checked> &nbsp; Male</input></div>
+                            <!-- <input type="radio" name="gender">Female</input> -->
+                            <div class="col-md-6 ">
+                                <input type="radio" name="gender"> &nbsp; Female</input></div>
+                        </div><br>
+
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <label for="validationDefault01">Category</label>
+                                <select class="custom-select" name="category" id="category" required>
+                                    <option>-- Select Category --</option>
+                                    <option>Returnee</option>
+                                    <option>Contact</option>
+                                    <option>Alert</option>
+                                    <option>Volunteer</option>
+                                </select>
+                                <p id="p9" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 ">
+
+                            </div>
+                            <div class="col-md-6 ">
+                                <button class="btn btn-primary" type="submit" style="width: 100%;"
+                                onclick="validating('register')">Register</button><br><br>
+                              
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="col-md-4"></div>
+    </div>
+    <script src="js/patient.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Patient Registration</title>
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5">                    
+                    <img src="images/uganda-flag-part.png" style="width: 500px;">
+                </div>
+                <div class="col-md-2">
+                    <img src="images/uganda-coat_of_arms.png" style="width: 200px;">
+                </div>
+                <div class="col-md-5">
+                    <img src="images/uganda-flag-part.png" style="width: 500px;">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col" style="margin: auto;">
+                    <h1>Ministry of Health</h1>
+                    <h2>Virus-Test Registration</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form action="/addpatient" method="POST" id="patientForm" name="validform">
+                        <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <label for="surname">Surname</label>
+                                <input class="form-control" type="text" id="surname" name="surname" style="border-radius: 5px;" />
+                                <small><p id="surError"></p></small>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="givenName">Given name</label>
+                                <input class="form-control" type="text" id="givenName" name="givenName" style="border-radius: 5px;" />
+                                <small><p id="givenError"></p></small>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <label for="dateofBirth">Date of Birth</label>
+                                <input class="form-control" type="date" id="dateofBirth" name="dateofBirth" style="border-radius: 5px;" />
+                                <small><p id="dobError"></p>
+                            </small>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="residence">Place of Residence</label>
+                                <input class="form-control" type="text" id="residence" name="residence" style="border-radius: 5px;">
+                                <small><p id="residenceError"></p>
+                            </small>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row">
+                            <div class="col-md-6">
+                                <label for="occupation">Occupation</label>
+                                <input class="form-control" type="text" id="occupation" name="occupation" style="border-radius: 5px;">
+                                <small><p id="occupationError"></p></small>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="nationality">Nationality</label>
+                                <input class="form-control" type="text" id="nationality" name="nationality" style="border-radius: 5px;">
+                                <small><p id="nationalityError"></p></small>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                        <small class="form-text text-muted">Gender</small>
+                        <div class="form-row">                        
+                            <div class="col form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="mgender" name="gender" value="male" checked />
+                                <label class="form-check-label radio-inline" for="mgender">Male</label>
+                            </div>
+                            <div class="col form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="fgender" name="gender" value="male">
+                                <label class="form-check-label radio-inline" for="fgender">Female</label>
+                                
+                            </div>
+                        </div>
+                        </div>              
+                        <div class="form-group">
+                            <select class="custom-select mr-sm-2" id="category" name="category">
+                                <option selected value="default">-- Select Category --</option>
+                                <option value="Returnee">Returnee</option>
+                                <option value="Contact">Contact</option>
+                                <option value="Alert">Alert</option>
+                                <option value="Volunteer">Volunteer</option>
+                            </select>
+                            <small><p id="categoryError"></p></small>
+                        </div>
+                        <div id="wrapper">
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="js/validator.js"></script>
+    </body>
+</html>

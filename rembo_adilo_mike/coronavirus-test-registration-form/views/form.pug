@@ -1,0 +1,75 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Patient Registration
+    link(rel="stylesheet" href="css/bootstrap/bootstrap.min.css")
+  body
+    .container
+      .row
+        .col
+          h1 Ministry of Health
+          h1 COVID-19 (CORONA VIRUS)
+          h2 Virus-Test Registration Form
+    .container
+      .row
+        .col
+          form#patientForm(action="/addpatient" method="POST" name="validform")
+            .form-group
+              .form-row
+                .col-md-6
+                  label(for="surname") Surname
+                  input#surname.form-control(type="text" name="surname" style="border-radius: 5px;")
+                  small
+                    p#surError
+                .col-md-6
+                  label(for="givenName") Given name
+                  input#givenName.form-control(type="text" name="givenName" style="border-radius: 5px;")
+                  small
+                    p#givenError
+            .form-group
+              .form-row
+                .col-md-6
+                  label(for="dateofBirth") Date of Birth
+                  input#dateofBirth.form-control(type="date" name="dateofBirth" style="border-radius: 5px;")
+                  small
+                    p#dobError
+                .col-md-6
+                  label(for="residence") Place of Residence
+                  input#residence.form-control(type="text" name="residence" style="border-radius: 5px;")
+                  small
+                    p#residenceError
+            .form-group
+              .form-row
+                .col-md-6
+                  label(for="occupation") Occupation
+                  input#occupation.form-control(type="text" name="occupation" style="border-radius: 5px;")
+                  small
+                    p#occupationError
+                .col-md-6
+                  label(for="nationality") Nationality
+                  input#nationality.form-control(type="text" name="nationality" style="border-radius: 5px;")
+                  small
+                    p#nationalityError
+            .form-group
+              small.form-text.text-muted Gender
+              .form-row
+                .col.form-check.form-check-inline
+                  input#mgender.form-check-input(type="radio" name="gender" value="male" checked="")
+                  label.form-check-label.radio-inline(for="mgender") Male
+                .col.form-check.form-check-inline
+                  input#fgender.form-check-input(type="radio" name="gender" value="male")
+                  label.form-check-label.radio-inline(for="fgender") Female
+            .form-group
+              select#category.custom-select.mr-sm-2(name="category")
+                option(selected="" value="default") -- Select Category --
+                option(value="Returnee") Returnee
+                option(value="Contact") Contact
+                option(value="Alert") Alert
+                option(value="Volunteer") Volunteer
+              small
+                p#categoryError
+            #wrapper
+              button.btn.btn-primary(type="submit") Register
+    script(src="js/validator.js")

@@ -1,0 +1,65 @@
+html {
+    margin: 10px 50px; 
+    
+
+}
+ .bdy{
+    
+   margin-left: 65px;
+   margin-right: 65px;
+} 
+
+.ay {
+    padding-left: 10px;
+   
+}
+.sup{
+    color: red;
+}
+
+#note {
+    margin-left: 70px;
+}
+
+.first-col {
+    float: left;
+    margin-left: 12px;
+
+}
+
+.second-col {
+    float: right;
+    margin-left: 35px;
+}
+
+.addr {
+   
+    width: 1100px;
+}
+
+.col-ab {
+    float: left;
+    margin-left: 10px;
+
+}
+
+.col-ac {
+    float: right;
+    margin-left: 35px;
+}
+
+#sub{
+    margin-left: 190px;
+    background-color: purple;
+    color: white;
+    width: 200px;
+}
+#canc{
+    margin-left: 550px;
+    color: purple;
+    background-color: white;
+    width: 200px;
+}
+#heading{
+    text-align: center;
+}

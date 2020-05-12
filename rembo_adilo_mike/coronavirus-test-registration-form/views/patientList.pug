@@ -1,0 +1,28 @@
+doctype
+html
+    head
+        title List of Tested Patients
+        link(rel="stylesheet", href="/css/bootstrap/bootstrap.css")
+    body
+        table.table
+            thead.thead-dark
+                tr
+                    th Surname
+                    th Given Name
+                    th Date of Birth
+                    th Residence
+                    th Occupation
+                    th Nationality
+                    th Gender
+                    th Category
+                tbody
+                    each patient in patients
+                        tr
+                            td #{patient.surname}
+                            td #{patient.givenName}
+                            td #{patient.dateofBirth}
+                            td #{patient.residence}
+                            td #{patient.occupation}
+                            td #{patient.nationality}
+                            td #{patient.gender}
+                            td #{patient.category}

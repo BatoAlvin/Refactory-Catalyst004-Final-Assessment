@@ -1,0 +1,60 @@
+doctype html
+html(lang="en")
+  head
+    title CORONAVIRUS REGISTRATION 
+    link(rel="stylesheet" href="../public//bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" href="../public/form.css")
+  body(style="margin-left: 250px;")
+    br
+    .container
+      .row
+        form(action="/register")
+          img(src="../public/form-header-image.png" style="padding-top: 30px; width: 900px;")
+          h4(style="margin-left: 270px;") Ministry of Health
+          h3(style="margin-left: 195px;")
+            strong  COVID-19   (CORONA VIRUS)
+          h4(style="margin-left: 240px;") Virus-Test Registration Form
+          .row
+            .col-md-6
+              label(for="") Surname
+              input.form-control(type="text" name="surname")
+            .col-md-6
+              label(for="") Given name
+              input.form-control(type="text" name="givename")
+              br
+              br
+          .row
+            .col-md-6
+              label(for="") Date of Birth
+              input.form-control(type="date" name="dob" required="")
+            .col-md-6
+              label(for="") Place of Residence
+              input.form-control(type="text" name="residence")
+              br
+              br
+          .row
+            .col-md-6
+              label(for="") Occupation
+              input.form-control(type="text" name="occupation")
+            .col-md-6
+              label(for="") Nationality
+              input.form-control(type="text" name="nationality")
+              br
+              br
+          .col-md-12
+            label(for="") Gender
+            .form-control(style="width: 700px;")
+              input#married(type="radio" name="gender")
+              span &nbsp; Male
+              input#married(type="radio" name="status")
+              span &nbsp;Female
+          .col-md-12
+            label(for="") Category
+            select.custom-select(id="" name="kindOfVehicle")
+              option(selected="" value="Default") select category
+              option(value="1")
+              option(value="2")
+              option(value="3")
+          br
+          input(type="submit" value="Register" name="register" style="background:blue;  width: 200px; margin-left: 600px;")
+script(src="/form.js")

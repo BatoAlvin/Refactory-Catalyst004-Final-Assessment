@@ -1,0 +1,40 @@
+.container{
+width: 900px;
+height: auto;
+border: 1px solid;
+margin-top: 30px;
+}
+.image{
+    width: 870px;
+    height: auto;
+    margin-left:none;
+}
+
+h1,h2{
+    text-align: center;
+}
+hr{
+    height: 0.1px;
+    width: 100%;
+    color: gray;
+    background-color: gray;
+}
+.form-row{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#radio1{
+    margin-left: 20px;
+}
+#radio2{
+    margin-left: 370px;
+}
+.btn-class{
+    margin-left: 390px;
+    background-color: #2557a1;
+    color: white;
+    width: 500px;
+    height: 40px;
+    border:none ;
+    margin-bottom: 25px;
+}

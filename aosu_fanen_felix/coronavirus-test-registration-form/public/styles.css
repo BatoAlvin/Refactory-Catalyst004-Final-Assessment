@@ -1,0 +1,80 @@
+/* html {
+    margin: 10px 50px; 
+} */
+.container{
+    margin-left: 200px;
+   
+    
+    
+}
+.headings{
+    width: 850px;
+    text-align: center;
+}
+ .bdy{
+    border: 1px solid lightslategray;
+    margin-right: 160px;
+    height: 800px;
+  
+} 
+
+.first-col {
+    float: left;
+    margin-left: 60px;
+    font-size: 25px;
+}
+#surName, #dob, #occupation, #given-name, #residence, #nationality{
+    height: 50px;
+}
+#cat{
+    height: 45px;
+    width: 850px;
+    text-align: center;
+}
+
+.second-col {
+    float: right;
+    margin-left: 35px;
+    font-size: 25px;
+}
+
+.addr {
+   
+    width: 1100px;
+}
+
+.col-ab {
+    float: left;
+    margin-left: 10px;
+
+}
+
+.col-ac {
+    float: right;
+    margin-left: 35px;
+}
+#gender, #male {
+    margin-left: 45px;
+    font-size: 25px;
+}
+
+#female{
+    margin-left: 400px;
+    font-size: 25px;
+}
+.cat{
+    margin-left: 45px;
+    font-size: 25px;
+}
+#reg{
+    margin-left: 600px;
+    width: 300px;
+    background-color:navy;
+    color: white;
+    font-size: 25px;
+}
+
+
+/* #heading{
+    text-align: center;
+} */

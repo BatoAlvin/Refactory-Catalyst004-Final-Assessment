@@ -1,0 +1,48 @@
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+   }
+
+   body {
+      background-color: #eee;
+      padding: 0 20px;
+   }
+
+   .form-wrap {
+      width: 640px;
+      background-color: #fff;
+      margin:0 auto;
+      border-radius: 10px;
+   }
+
+   form{
+      padding: 0 25px 25px 25px;
+   }
+
+   .title {
+      text-align: center;
+      padding: 15px 0;
+   }
+
+   .title_title {
+      font-size: 1rem;
+   }
+
+   .title_head {
+      margin-bottom: 0;
+   }
+
+   .title_subhead {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+   }
+
+   p {
+      font-size: 12px;
+   }
+
+   #footer p {
+      font-size: 15px;
+      text-align: left;
+   }

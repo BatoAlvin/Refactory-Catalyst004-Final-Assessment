@@ -1,0 +1,41 @@
+doctype html
+html
+    head
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
+        title Patient List 
+    body
+        div.form-row
+            div.col.form-group.col-md-9    
+                form.search(action='/patientList')
+                    div.form-row
+                        div.col-md-8
+                            input.form-control(name='surname' placeholder="Enter your search term ...")
+                        div.col-md-4
+                            input.btn.btn-dark.btn-block(type="submit")
+        table.table.table-sm
+            thead
+                tr
+                    th Surname  
+                    th Given name
+                    th Date of birth
+                    th Residence
+                    th Occupation
+                    th Nationality
+                    th Gender
+                    th Category
+                    th Action
+            tbody
+                each patient in patients
+                    tr
+                        td #{patient.surname}
+                        td #{patient.givenname}
+                        td #{patient.birth}  
+                        td #{patient.residence}
+                        td #{patient.occupation}
+                        td #{patient.nationality}
+                        td #{patient.gender}
+                        td #{patient.input--style-4}
+                        td
+                           form(method="post" action="/addPatient/delete")
+                                input(type="hidden", placeholder="", name="id", value=user._id)
+                                button.btn.btn-dark.btn-block(type="Submit") Delete

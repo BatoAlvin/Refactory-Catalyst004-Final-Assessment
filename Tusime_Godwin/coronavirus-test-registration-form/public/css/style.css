@@ -1,0 +1,23 @@
+body{
+background-color: beige;
+}
+#form{
+
+border: 1px solid rgb(179, 178, 178);
+width: fit-content;
+}
+#formdiv{
+margin: 20px;
+padding: 15px;
+}
+#check{
+text-align: center;
+}
+#header1{
+font-weight: bolder;
+font-size: xx-large;
+color: black;
+}
+#heading2{
+background-color: rgb(6, 141, 67);
+}

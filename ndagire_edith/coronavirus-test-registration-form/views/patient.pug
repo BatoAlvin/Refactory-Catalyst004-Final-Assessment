@@ -1,0 +1,28 @@
+html
+    head    
+        title List of users
+    body
+        table
+            thead
+                tr  
+                    th Surname
+                    th Given name
+                    th Date of Birth
+                    th Place of Residence
+                    th Occupation
+                    th Nationality
+                    th Gender
+                    th Category
+
+            tbody
+             each user in users
+                    tr
+                        td #{user.surname}
+                        td #{user.givenname}
+                        td #{user.dob}
+                        td #{user.por}
+                        td #{user.occ}
+                        td #{user.nation}
+                        td #{user.gender}
+                        td #{user.category}
+

@@ -1,0 +1,54 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Covid Registration form
+    link(rel="stylesheet" href="../public/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" href="reg.css")
+  body(onload="document.regpatient.surname.focus();")
+    form(method="POST" name="regpatient" action="/register" onsubmit="validate();")
+     
+      .container
+        .row
+           img(src="images/header.JPG", alt=""  width="800px" height="150px" )
+        .row
+          .col2
+            label(for="surname") Surname
+            input#surname(type="text" required name="surname" )
+          .col2
+            label(for="givenname") Given name
+            input#givenname(type="text" required name="givenname")
+        .row
+          .col2
+            label(for="dob") Date of Birth
+            input#dob(type="date" required name="dob" )
+          .col2
+            label(for="por") Place of residence
+            input#por(type="text" required name="por" )
+        .row
+          .col2
+            label(for="occ") Occupation
+            input#occ(type="text" required name="occ" )
+          .col2
+            label(for="nation") Nationality
+            input#nation(type="text" required name="nation" )
+        .row
+            label(for="gender") Gender
+            hr
+            input#male(value= "Male" type="radio" checked  name="gender")
+            span Male&nbsp;
+            input#female(value= "Female" type="radio"  name="gender")
+            span &nbsp;Female&nbsp;
+        .row
+            label(for="category") Category
+            .select-list
+                select#category(name="category" required)
+                    option(selected="") -- Select Category --
+                    option(value="Returnee") Returnee
+                    option(value="Contract") Contract
+                    option(value="Alert") Alert
+                    option(value="Volunteer") Volunteer
+        .row
+            input#submit.submit(type="submit" value="Register"  onclick="validate()")
+      script(src="/reg.js")  

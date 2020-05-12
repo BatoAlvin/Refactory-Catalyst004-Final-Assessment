@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/coronavirus.css">
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div id="body-div">
+                <header>
+                    <img src="/images/form-header-image.png" alt="Header Image">
+                </header>
+                <div class="row">
+                    <div class="col-md-12" style="text-align: center;">
+                        <h5>Ministry of Health</h5>
+                        <h3>COVID-19 (CORONA VIRUS)</h3>
+                        <h5>Virus - Test Registration Form</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <h2 class="success-message">Registration was successful !</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <form name="registrationForm" onsubmit="return formValidation();" action="/addPatient" method="POST">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="surName">Surname</label><span class="red-asterisk">*</span>
+                                    <input type="text" class="form-control" name="surName">
+                                    <div id="surName-error" class="error">This field is required</div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label for="givenName">Given name</label><span class="red-asterisk">*</span>
+                                    <input type="text" class="form-control" name="givenName">
+                                    <div id="givenName-error" class="error">This field is required</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="dob">Date of Birth</label><span class="red-asterisk">*</span>
+                                    <input type="date" class="form-control" name="dob">
+                                    <div id="dob-error" class="error">Select Date of Birth</div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label for="residence">Place of Residence</label><span class="red-asterisk">*</span>
+                                    <input type="text" class="form-control" name="residence">
+                                    <div id="residence-error" class="error">This field is required</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="occupation">Occupation</label><span class="red-asterisk">*</span>
+                                    <input type="text" class="form-control" name="occupation">
+                                    <div id="occupation-error" class="error">This field is required</div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label for="nationality">Nationality</label><span class="red-asterisk">*</span>
+                                    <input type="text" class="form-control" name="nationality">
+                                    <div id="nationality-error" class="error">This field is required</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="gender">Gender</label>
+                                    <div class="row" style="margin-top: -15px;"><div class="hr-line"><hr></div></div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: -25px; margin-bottom: -10px;">
+                                <div class="col-md-6 form-group">
+                                    <span><input type="radio" name="gender" id="male" value="Male" checked></span><label for="male" style="margin-left: 10px;">Male</label>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <span><input type="radio" name="gender" id="female" value="Female"><label for="female" style="margin-left: 10px;">Female</label></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    <label for="category">Category</label><span class="red-asterisk">*</span>
+                                    <select name="category" id="category" class="form-control">
+                                        <option value="Default">-- Select Category --</option>
+                                        <option value="Returnee">Returnee</option>
+                                        <option value="Contact">Contact</option>
+                                        <option value="Alert">Alert</option>
+                                        <option value="Volunteer">Volunteer</option>
+                                    </select>
+                                    <div id="category-error" class="error">Select Patient Category</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 offset-md-6 form-group">
+                                    <input type="submit" class="form-control btn btn-primary" value="Register">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/js/patientValidation.js"></script>
+    <!-- <script src="/js/bootstrap.min.js"></script> -->
+    <!-- <script src="/js/jquery-3.5.1.min.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Corona Virus Registration</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <link rel="stylesheet" href="../static/register.css">
+</head>
+
+<body>
+   <div class="form-wrap">
+      <div class="form-row mx-auto image-placement">
+         <img src="../static/img/form-header-image.png" alt="Uganda National emblem">
+      </div>
+      <!-- form title -->
+      <div class="title">
+         <h1 class="title_head"><strong>COVID-19 (CORONA VIRUS)</strong></h1>
+         <p class="title_subhead">Virus-Test Registration Form</p>
+      </div>
+
+      <!-- form entries -->
+      <form action="/register/patients" method="POST" onsubmit="return registerValid()" id="registerForm"
+         name="registerForm">
+         <hr>
+         <div class="form-row">
+            <div class="form-group col-md-6">
+               <label for="inputEmail4">Surname</label>
+               <input type="text" class="form-control" id="surname" name="surname">
+               <p class="text-danger" id="is-valid1"></p>
+            </div>
+            <div class="form-group col-md-6">
+               <label for="inputPassword4">Given Name</label>
+               <input type="text" class="form-control" id="givenName" name="givenName">
+               <p class="text-danger" id="is-valid2"></p>
+            </div>
+         </div>
+
+         <!-- date of birth and residence -->
+         <div class="form-row">
+            <div class="form-group col-md-6">
+               <label for="inputEmail4">Date of Birth</label>
+               <input type="date" class="form-control" id="dob" name="dob" placeholder="YY/MM/DD">
+               <p class="text-danger" id="is-valid3"></p>
+            </div>
+            <div class="form-group col-md-6">
+               <label for="inputPassword4">Place of Residence</label>
+               <input type="text" class="form-control" id="residence" name="residence">
+               <p class="text-danger" id="is-valid4"></p>
+            </div>
+         </div>
+
+         <!-- occupation and nationality -->
+         <div class="form-row">
+            <div class="form-group col-md-6">
+               <label for="inputEmail4">Occupation</label>
+               <input type="text" class="form-control" id="occupation" name="occupation">
+               <p class="text-danger" id="is-valid5"></p>
+            </div>
+            <div class="form-group col-md-6">
+               <label for="inputPassword4">Nationality</label>
+               <input type="text" class="form-control" id="nationality" name="nationality">
+               <p class="text-danger" id="is-valid6"></p>
+            </div>
+         </div>
+
+         <!-- gender selection -->
+         <div class="gender-selcetion">
+            <p class="title_title">Gender</p>
+            <hr>
+            <div class="form-check-inline">
+               <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="gender" id="gender" value="female" checked>Female
+               </label>
+            </div>
+            <div class="form-check-inline">
+               <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="gender" id="gender" value="male">Male
+               </label>
+            </div>
+            <p class="text-danger" id="is-valid7"></p>
+         </div>
+         <hr>
+
+         <!-- Categories -->
+         <div class="form-group">
+            <label for="inputState">Category</label>
+            <select type="text" id="inputState" class="form-control" name="category">
+               <option value="default" selected>select category...</option>
+               <option value="Nakawa Division">Returnee</option>
+               <option value="Rubaga Division">Contact</option>
+               <option value="Kawempe Division">First Responder</option>
+               <option value="Kawempe Division">Volunteer</option>
+            </select>
+            <p class="text-danger" id="is-valid8"></p>
+         </div>
+
+         <!-- buttons -->
+         <div class="row" style="display:flex">
+            <div class="col-lg-12">
+               <button type="submit" class="btn btn-primary col-md-2 float-right"
+                  style="margin-left:5px">Register</button>
+               <button type="reset" class="btn btn-dark col-md-2 float-right">Reset</button>
+            </div>
+         </div>
+
+         <!-- footer -->
+         <div id="footer">
+            <hr>
+            <p>&copy; Copyright 2020, by Gerald Ssali for Ministry of Health and Government of Uganda</p>
+         </div>
+
+      </form>
+   </div>
+
+
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+   <script src="/static/registerValid.js"></script>
+</body>
+
+</html>

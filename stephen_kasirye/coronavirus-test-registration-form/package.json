@@ -1,0 +1,35 @@
+{
+  "name": "coronavirus-test-registration-form",
+  "version": "1.0.0",
+  "description": "Corona virus Patient Registration Form",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "connect-mongo": "^3.2.0",
+    "mongoose": "^5.9.7",
+    "express-session": "^1.17.0",
+    "passport": "^0.4.1",
+    "nodemon": "^2.0.2",
+    "path": "^0.12.7",
+    "passport-local-mongoose": "^6.0.1",
+    "pug": "^2.0.4",
+    "uuid": "^7.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skcodeug/Refactory-Catalyst004-Final-Assessment.git"
+  },
+  "author": "Stephen Kasirye",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skcodeug/Refactory-Catalyst004-Final-Assessment/issues"
+  },
+  "homepage": "https://github.com/skcodeug/Refactory-Catalyst004-Final-Assessment#readme"
+}

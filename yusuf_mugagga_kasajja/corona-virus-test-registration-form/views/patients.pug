@@ -1,0 +1,62 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title COVID-19 Ug
+    link(rel='stylesheet' href='/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/css/styles.css')
+    
+    body
+        header
+            img(src="/images/form-header-image.png", alt="logo")
+        br
+        br
+        h2 Registered Patients
+        br
+            
+
+        table.table.table-hover
+            thead.thead-light
+                tr
+                    th(scope='col') Surname
+                    th(scope='col') Given name
+                    th(scope='col') Place of Residence
+                    th(scope='col') Nationality
+                    th(scope='col') Category
+            tbody
+                each patient in patients
+                    tr
+                        td #{patient.surname}
+                        td #{patient.givenname}
+                        td #{patient.residence}
+                        td #{patient.nationality}
+                        td #{patient.category}
+
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        
+        div#footer
+            footer
+                |  Yusuf Mugagga Kasajja &copy;2020
+
+        script(src='/validation.js')
+

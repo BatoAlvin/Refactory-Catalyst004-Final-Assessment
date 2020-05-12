@@ -1,0 +1,16 @@
+.container {
+  border: 1px solid rgb(156, 152, 152);
+  margin-top: 5px;
+}
+
+.form {
+  margin: 50px;
+}
+
+.image {
+  padding: 0 !important;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+}

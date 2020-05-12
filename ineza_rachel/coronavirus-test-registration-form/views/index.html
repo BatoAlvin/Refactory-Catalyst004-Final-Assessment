@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="/index.css">
+ <script src="/validate.js"></script>
+    <title>Registration form</title>
+</head>
+<body>
+    <div class="container">
+    <img class="image" src="/image.png">
+    <div class="rowheading">
+     <h2>Ministry of Health</h2>
+     <h1><strong>COVID-19 (CORONA VIRUS)</strong></h1>
+     <h2>Virus-Test Registration Form</h2>
+    </div>
+    <form method="POST" action="/register" onsubmit="handlesubmit(event);" >
+        <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Surname</label>
+              <input type="text" class="form-control" id="surnameid" name="surname" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Given name</label>
+              <input type="text" class="form-control" id="givennameid" name="givenname" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label>Date of Birth</label>
+                <input type="date" class="form-control" id="dobid" name="DOB" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label>Place of residence</label>
+                <input type="text" class="form-control" id="residenceid" name="residencename" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label>Occupation</label>
+                <input type="text" class="form-control" id="occupationid" name="occupation" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label>Nationality</label>
+                <input type="text" class="form-control" id="nationalityid" name="nationality" required>
+              </div>
+              Gender
+              <hr>
+              <div id="radio1">
+                <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="male" checked>
+                <label>Male</label>
+              </div>
+              <div id="radio2">
+                <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="female">
+                <label>Female</label>
+              </div>
+              <div class="form-group col-md-12">
+                <label >Category</label>
+                <select class="form-control" id="category" name="category">
+                  <option>Returnee</option>
+                  <option>Contact</option>
+                  <option>Alert</option>
+                  <option>Volunteer</option>
+                </select>
+              </div>
+              <button type="submit" class="btn-class">Register</button>
+          </div>
+         
+    </form>
+    </div>
+</body>
+</html>
